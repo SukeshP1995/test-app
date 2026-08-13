@@ -1,0 +1,29 @@
+// _mixins.scss
+@use "_variables" as v;          // ← this makes the variables available
+
+@mixin rounded($size: v.$radius) {
+  border-radius: $size;
+}
+
+@mixin button-base {
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background v.$transition, transform v.$transition;
+}
+
+@mixin colored-button($bg: v.$primary, $hover: v.$primary-hover) {
+  background: $bg;
+  color: white;
+
+  &:hover {
+    background: $hover;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
