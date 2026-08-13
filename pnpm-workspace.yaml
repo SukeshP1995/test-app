@@ -3,3 +3,5 @@ allowBuilds:
   svelte-preprocess: true
 onlyBuiltDependencies:
   - esbuild
+overrides:
+  '@sveltejs/vite-plugin-svelte': npm:@rsvelte/vite-plugin-svelte
